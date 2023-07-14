@@ -286,6 +286,7 @@ fn rust_arches(linux_arch: &str) -> &[&str] {
         "arm" => &["arm"],
         "arm64" => &["aarch64"],
         "avr32" => &["avr"],
+        "csky" => &["csky"],
         // hexagon gets build errors; disable it for now
         "hexagon" => &[],
         "loongarch" => &["loongarch64"],
