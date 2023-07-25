@@ -283,24 +283,9 @@ fn make_headers_install(linux_arch: &str, linux_headers: &Path) {
 
 fn rust_arches(linux_arch: &str) -> &[&str] {
     match linux_arch {
-        "arm" => &["arm"],
-        "arm64" => &["aarch64"],
-        "avr32" => &["avr"],
         "csky" => &["csky"],
-        // hexagon gets build errors; disable it for now
-        "hexagon" => &[],
-        "loongarch" => &["loongarch64"],
-        "mips" => &["mips", "mips64"],
-        "powerpc" => &["powerpc", "powerpc64"],
-        "riscv" => &["riscv32", "riscv64"],
-        "s390" => &["s390x"],
-        "sparc" => &["sparc", "sparc64"],
-        "x86" => &["x86", "x86_64", "x32"],
-        "alpha" | "cris" | "h8300" | "m68k" | "microblaze" | "mn10300" | "score" | "blackfin"
-        | "frv" | "ia64" | "m32r" | "m68knommu" | "parisc" | "sh" | "um" | "xtensa"
-        | "unicore32" | "c6x" | "nios2" | "openrisc" | "csky" | "arc" | "nds32" | "metag"
-        | "tile" => &[],
-        _ => panic!("unrecognized arch: {}", linux_arch),
+        "x86" => &["x86_64"],
+        _ => &[],
     }
 }
 
